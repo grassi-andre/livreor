@@ -1,0 +1,57 @@
+
+
+html{
+    background-color: #FFE693;
+}
+
+/*  HEADER  */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Pour changer la couleur de la navbar  */
+  li a:hover {
+    background-color: #111;
+  }
+
+
+  /*  FOOTER  */
+
+  article {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+
+.nav{
+  display: flex;
+}
