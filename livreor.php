@@ -40,22 +40,11 @@ $comment  = $insert->execute();
     <title>Livre d'or</title>
 </head>
 <body>
-
-    <div class="nav">
-            <ul>
-        
-                    <!-- Rajouter les liens pour accueil et contarct -->
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="connexion.php">Connexion</a></li>
-                <li><a href="inscription.php">Inscription</a></li>
-                <li><a href="livreor.php">Livre d'or</a></li>
-                <li><a href="commentaire.php">Commentaire</a></li>
-                <li style="float:right"><a class="active" href="livreor.html">À-propos</a></li>
-    
-            </ul>
-    </div>
-
     <?php
+    include('header.php')
+?>
+'
+<?php
 while($comment= $insert->fetch()){
 
    echo  $comment['login'] .':'. ' '. $comment['commentaire'] .'   '. $comment['date']. '<br/> <br /><br/>' ;

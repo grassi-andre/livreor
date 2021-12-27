@@ -32,9 +32,6 @@ catch(PDOException $e){
             @$password = htmlspecialchars($_POST['password']);
             
         }
-        else{
-            echo "Remplissez ce champ<br/>";
-        }
     } 
 
     // Verifie si le login est disponnible dans la BDD sinon changer de pseudo
@@ -87,17 +84,10 @@ catch(PDOException $e){
     <title>Document</title>
 </head>
 <body>
-<ul>
-        
-        <!-- Rajouter les liens pour accueil et contarct -->
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="connexion.php">Connexion</a></li>
-        <li><a href="inscription.php">Inscription</a></li>
-        <li><a href="livreor.php">Livre d'or</a></li>
-        <li><a href="commentaire.php">Commentaire</a></li>
-        <li style="float:right"><a class="active" href="livreor.html">À-propos</a></li>
-    
-    </ul>
+<?php
+include('header.php')
+?>          
+
 
 
 
@@ -120,18 +110,14 @@ catch(PDOException $e){
 
 </fieldset>
 </form>
-</div>
-<div class="codeco">
-<a href="index.php">Accueil</a>
-</div>
-<div class="deco">
-<a href="deconnexion.php">Déconnexion</a>
-</div>
 
 
 
 
-<button ><a href="deconnexion">Se deconnecter</a></button>
+
+
+
+
 </body>
 </html>
 

@@ -37,8 +37,6 @@ $mdp ='root';
                     $userinfo = $requser->fetch();//recupere le resultat
                     $_SESSION['id'] = $userinfo['id'];
                     $_SESSION['login'] = $userinfo['login'];
-                    $_SESSION['nom'] = $userinfo['nom'];
-                    $_SESSION['prenom'] = $userinfo['prenom'];
                     $_SESSION['password'] = $userinfo['password'];
                     
                 
@@ -70,17 +68,10 @@ $mdp ='root';
     <title>connexion</title>
 </head>
 <body>
-<ul>
-        
-        <!-- Rajouter les liens pour accueil et contarct -->
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="connexion.php">Connexion</a></li>
-        <li><a href="inscription.php">Inscription</a></li>
-        <li><a href="livreor.php">Livre d'or</a></li>
-        <li><a href="commentaire.php">Commentaire</a></li>
-        <li style="float:right"><a class="active" href="livreor.html">À-propos</a></li>
-    
-    </ul>
+<?php
+include ('header.php') ;
+?>       
+
  
 
 
@@ -105,10 +96,22 @@ $mdp ='root';
 
     </form>
             </div>
-            <button ><a href="deconnexion">Se deconnecter</a></button>
+
+            
 
 
-            <h1><?php echo @$_SESSION['login']?></h1>
+            <h1><?php 
+
+                if(isset($_SESSION['id'])){
+                    echo 'Connexion reussi';
+                }
+                else
+                if(!isset($_SESSION['id'])){
+                    echo 'Vous etes déconnecté';
+                }
+            
+            
+            ?></h1>
 
 </main>
 

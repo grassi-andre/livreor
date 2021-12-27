@@ -15,17 +15,9 @@ session_start();
     <title>Accueil</title>
 </head>
 <body>
-<ul>
-        
-        <!-- Rajouter les liens pour accueil et contarct -->
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="connexion.php">Connexion</a></li>
-        <li><a href="inscription.php">Inscription</a></li>
-        <li><a href="livreor.php">Livre d'or</a></li>
-        <li><a href="commentaire.php">Commentaire</a></li>
-        <li style="float:right"><a class="active" href="livreor.html">À-propos</a></li>
-    
-    </ul>
+<?php
+include('header.php');
+?>         
 
 
 
@@ -34,16 +26,9 @@ session_start();
 
 
 
-    <button ><a href="deconnexion">Se deconnecter</a></button>
 
-    <footer>
-            <article>
-                <ul>
-                    <!-- Rajouter les liens pour accueil new et contarct -->
-                    <li><a href="index.php">Accueil</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </article>
-        </footer>
+
+
+ 
 </body>
 </html>

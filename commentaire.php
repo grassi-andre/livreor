@@ -35,23 +35,16 @@ if(isset($_SESSION['id'])){
     <title>Commentaire</title>
 </head>
 <body>
-<ul>
-        
-        <!-- Rajouter les liens pour accueil et contarct -->
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="connexion.php">Connexion</a></li>
-        <li><a href="inscription.php">Inscription</a></li>
-        <li><a href="livreor.php">Livre d'or</a></li>
-        <li><a href="commentaire.php">Commentaire</a></li>
-        <li style="float:right"><a class="active" href="livreor.html">À-propos</a></li>
-    
-    </ul>
+<?php
+include('header.php')
+?>          
+
  
 <form action="#" method="POST">
 <textarea name="comment" id="" cols="30" rows="10"></textarea>
 <input type="submit" value="submit" name="submit">
 </form>
     
-<button ><a href="deconnexion">Se deconnecter</a></button>
+
 </body>
 </html>
